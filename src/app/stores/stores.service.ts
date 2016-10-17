@@ -8,11 +8,11 @@ export class StoresService {
   constructor(private http : Http) { }
 
   
-  private _apiUrl = 'http://lcboapi.com/';
+  private _apiUrl = 'http://lcboapi.com/'; //Para obtener tu token de acceso debes ingresar a la página y crear tu cuenta.
 
   getStoresList () : Promise<any>{
     
-    let headers = new Headers({'authorization' : 'Token MDo2YjgyNWNkYS05MjM4LTExZTYtYWQyMi01ZjhiNmNmNzM0OWU6V04xYW1vU3ZFWXB0QUkzU2tBUEV0bElUQ0tHWW5QdVN2eG1T'});
+    let headers = new Headers({'authorization' : 'Token TOKEN_ACCESS'});
     let options = new RequestOptions({ headers : headers});
 
     return this.http.get(this._apiUrl + "stores/", options)
