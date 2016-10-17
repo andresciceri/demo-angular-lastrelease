@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Listado Productos</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-4" *ngFor="let product of productsList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                {{product.name}}
+                <button type="button" class="btn btn-info btn-sm" (click)="viewDetail(product.product_no)">Buscar</button>
+            </div>
+            <div class="panel-body">
+            	<img src="{{product.image_thumb_url}}">
+            </div>
+            <div class="panel-footer">
+                <p><b>Precio:</b> {{product.price_in_cents}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -15,9 +15,17 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/metisMenu/metisMenu.min.css",
+        "assets/morrisjs/morris.css",
+        "assets/font-awesome/css/font-awesome.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/jquery/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "assets/metisMenu/metisMenu.min.js",
+        "assets/dist/js/sb-admin-2.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

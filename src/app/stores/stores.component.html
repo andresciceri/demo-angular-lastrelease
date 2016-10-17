@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Directorio Tiendas</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-4" *ngFor="let store of storesList">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                {{store.name}}
+                <button type="button" class="btn btn-info btn-sm" (click)="viewDetail(store.id)">Detalle</button>
+            </div>
+            <div class="panel-body">
+                <p><b>Ciudad:</b> {{store.city}}</p>
+                <p><b>Dirección:</b> {{store.address_line_1}} {{store.address_line_2}}</p>
+                <p><b>Codigo postal:</b> {{store.postal_code}}</p>
+            </div>
+            <div class="panel-footer">
+                <b>Telefonos: {{store.telephone}} - {{store.fax}}</b>
+            </div>
+        </div>
+    </div>
+</div>
